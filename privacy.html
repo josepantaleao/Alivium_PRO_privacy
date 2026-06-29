@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidade — Alivium PRO</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.7;
+      color: #1a1a1a;
+      background: #f5f6f8;
+      padding: 32px 16px;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+
+    header {
+      background: #003DA0;
+      color: #fff;
+      padding: 28px 36px 24px;
+    }
+
+    header h1 {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+
+    header p {
+      font-size: 13px;
+      color: #c0d4f5;
+      margin-top: 4px;
+    }
+
+    .content {
+      padding: 32px 36px;
+    }
+
+    h2 {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: #003DA0;
+      margin: 28px 0 10px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #e8edf5;
+    }
+
+    h2:first-child { margin-top: 0; }
+
+    p { margin-bottom: 10px; color: #333; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0 4px;
+      font-size: 13px;
+    }
+
+    thead tr { background: #003DA0; color: #fff; }
+    thead th { padding: 9px 12px; text-align: left; font-weight: 600; }
+    tbody tr:nth-child(even) { background: #f0f4fb; }
+    tbody td { padding: 8px 12px; border-bottom: 1px solid #e4e9f2; color: #333; }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .badge-local  { background: #e6f4ea; color: #1a7340; }
+    .badge-server { background: #fdecea; color: #b71c1c; }
+    .badge-none   { background: #e8edf5; color: #003DA0; }
+
+    .highlight {
+      background: #f0f4fb;
+      border-left: 4px solid #003DA0;
+      padding: 12px 16px;
+      border-radius: 0 6px 6px 0;
+      margin: 12px 0;
+      font-size: 13px;
+      color: #1a2a4a;
+    }
+
+    footer {
+      background: #f0f4fb;
+      padding: 16px 36px;
+      font-size: 12px;
+      color: #666;
+      border-top: 1px solid #e0e6f0;
+    }
+
+    footer a { color: #003DA0; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>Política de Privacidade — Alivium PRO</h1>
+    <p>Extensão Google Chrome · Versão 9.1 · Atualizado em 28/06/2026</p>
+  </header>
+
+  <div class="content">
+
+    <h2>1. O que é o Alivium PRO</h2>
+    <p>
+      O <strong>Alivium PRO</strong> é uma extensão para Google Chrome que automatiza o lançamento
+      de frequência, notas e conteúdo programático nos sistemas <strong>SIAP</strong> (SEDUC-GO) e
+      <strong>Portal do Docente</strong> (SENAI-GO). A extensão é operada exclusivamente pelo
+      professor titular da turma, autenticado em sua própria sessão nos portais.
+    </p>
+
+    <h2>2. Dados tratados</h2>
+    <p>
+      Durante o uso, a extensão lê os seguintes dados para executar as automações:
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Dado</th>
+          <th>Origem</th>
+          <th>Finalidade</th>
+          <th>Destino</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Nomes de alunos</td>
+          <td>CSV carregado pelo professor</td>
+          <td>Identificar aluno no portal</td>
+          <td><span class="badge badge-local">Somente dispositivo</span></td>
+        </tr>
+        <tr>
+          <td>Matrículas (SEDUC / SENAI)</td>
+          <td>CSV carregado pelo professor</td>
+          <td>Localizar aluno no DOM do portal</td>
+          <td><span class="badge badge-local">Somente dispositivo</span></td>
+        </tr>
+        <tr>
+          <td>Frequências (P/F por data)</td>
+          <td>CSV carregado pelo professor</td>
+          <td>Preencher checkboxes de frequência</td>
+          <td><span class="badge badge-local">Somente dispositivo</span></td>
+        </tr>
+        <tr>
+          <td>Notas por bimestre</td>
+          <td>CSV carregado pelo professor</td>
+          <td>Preencher campos de nota</td>
+          <td><span class="badge badge-local">Somente dispositivo</span></td>
+        </tr>
+        <tr>
+          <td>Conteúdo programático</td>
+          <td>Arquivo .docx (FO-178)</td>
+          <td>Preencher calendário de conteúdo</td>
+          <td><span class="badge badge-local">Somente dispositivo</span></td>
+        </tr>
+        <tr>
+          <td>Chave de licença</td>
+          <td>Digitada pelo professor no popup</td>
+          <td>Validar licença de uso</td>
+          <td><span class="badge badge-server">Servidor de licenças</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>3. O que NÃO ocorre</h2>
+    <div class="highlight">
+      Nenhum dado de aluno (nome, matrícula, frequência ou nota) é enviado a qualquer servidor
+      externo. Todo o processamento ocorre localmente no browser do professor. A única comunicação
+      com servidor externo é a validação da chave de licença.
+    </div>
+
+    <h2>4. Armazenamento local</h2>
+    <p>
+      A extensão utiliza <code>chrome.storage.local</code> para persistir dados temporários
+      entre navegações (necessário porque os portais recarregam a página a cada operação):
+    </p>
+
+    <table>
+      <thead>
+        <tr><th>Dado armazenado</th><th>Duração</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>CSV de frequência / notas carregado</td><td>Até o professor remover ou encerrar a sessão</td></tr>
+        <tr><td>Estado das automações em andamento</td><td>Limpo automaticamente ao reiniciar a extensão</td></tr>
+        <tr><td>Conteúdo programático (.docx parseado)</td><td>Até o professor clicar em "Limpar"</td></tr>
+        <tr><td>Chave e status de licença</td><td>Persistente; revalidado a cada 24 horas</td></tr>
+      </tbody>
+    </table>
+
+    <p style="margin-top:12px;">
+      Todos os dados temporários com registro de data são removidos automaticamente após
+      <strong>48 horas</strong> na inicialização da extensão.
+    </p>
+
+    <h2>5. Responsabilidades</h2>
+    <p>
+      A extensão automatiza ações que o professor realizaria manualmente nos portais institucionais.
+      O professor é o <strong>operador</strong> dos dados; <strong>SENAI-GO / SEDUC-GO</strong> são
+      os controladores. A base legal do tratamento é a execução das atividades pedagógicas pelo
+      docente titular, no exercício de suas funções institucionais.
+    </p>
+
+    <h2>6. Segurança</h2>
+    <p>
+      Os dados processados nunca saem do dispositivo do professor. A chave de licença é transmitida
+      via HTTPS para o servidor de validação e não é armazenada em texto exposto. A extensão não
+      coleta dados de uso, não registra logs em servidores externos e não exibe publicidade.
+    </p>
+
+    <h2>7. Contato</h2>
+    <p>
+      Dúvidas sobre esta política ou sobre o tratamento de dados:
+      <a href="mailto:seja.you.b@gmail.com">seja.you.b@gmail.com</a>
+    </p>
+
+  </div>
+
+  <footer>
+    Desenvolvido por <strong>José Pantaleão</strong> · Alivium PRO v9.1 ·
+    Lei Geral de Proteção de Dados — Lei nº 13.709/2018
+  </footer>
+
+</div>
+</body>
+</html>
